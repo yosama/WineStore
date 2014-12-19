@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YOSWineModel.h"
 
 @interface YOSWineViewController : UIViewController
+
+@property (strong, nonatomic)YOSWineModel *model;
+
+-(id) initWithModel: (YOSWineModel *) aModel;
 
 @end

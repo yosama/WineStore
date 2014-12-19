@@ -8,17 +8,38 @@
 
 #import "YOSWineViewController.h"
 
-@interface YOSWineViewController ()
 
-@end
 
 @implementation YOSWineViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+-(id) initWithModel: (YOSWineModel *) aModel{
+    
+    if ( self = [super initWithNibName:nil
+                                bundle:nil]){
+        _model = aModel;
+    }
+    
+    return self;
+    
 }
 
+
+
+
+// Mantiene sincronizado modelo y vista.
+//-(void) viewWillAppear:(BOOL)animated{
+//    [super viewWillAppear:<#animated#>];
+//}
+//
+//-(void) viewWillDisappear:(BOOL)animated{
+//    [super viewWillAppear:<#animated#>];
+//}
+
+
+
+// Cuando el sistema operativa se da cuenta que se esta quedando sin memoria, envia un mensaje a este metodo.
+// Lo que se hace aqui es eliminar todo aquello que no necesites.
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

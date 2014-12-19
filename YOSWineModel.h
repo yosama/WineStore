@@ -8,6 +8,56 @@
 
 #import <Foundation/Foundation.h>
 
+#define NO_RATING -1
+
 @interface YOSWineModel : NSObject
+
+@property (strong, nonatomic)NSString *type;
+//@property (strong, nonatomic)UIImage *photo;
+@property (strong, nonatomic) NSURL *webCompany;
+@property (strong, nonatomic) NSString *notes;
+@property (strong,nonatomic) NSString *origin;
+@property (nonatomic) int rating; // 0 a 5
+@property (strong, nonatomic) NSArray *grapes;
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *wineCompanyName;
+
+
+
+// Metodos de clases
+// Constructores de conveniencia
++(id)wineWith:(NSString *)aName
+wineCompanyName:(NSString *)aWineCompanyName
+         type:(NSString *) aType
+      origin :(NSString *) aOrigin
+       grapes:(NSArray *)  arrayOfGrapes
+   webCompany:(NSURL *)   aURL
+        notes: (NSString *) aNotes
+       rating: (int) aRating;
+
++(id)wineWith:(NSString *) aName
+wineCompanyName:(NSString *) aWineCompanyName
+         type:(NSString *) aType
+       origin:(NSString *) aOrigin;
+
+
+
+// Metodos de Instancia
+// Inicializador designado.
+-(id)initWithName:(NSString *)aName
+  wineCompanyName:(NSString *)aWineCompanyName
+             type:(NSString *) aType
+          origin :(NSString *) aOrigin
+           grapes:(NSArray *)  arrayOfGrapes
+       webCompany:(NSURL *)   aURL
+            notes: (NSString *) aNotes
+           rating: (int) aRating;
+
+
+// Inicializador de conveniencia.
+-(id)initWithName:(NSString *) aName
+  wineCompanyName:(NSString *) aWineCompanyName
+             type:(NSString *) aType
+           origin:(NSString *) aOrigin;
 
 @end
