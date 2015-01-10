@@ -7,13 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #define NO_RATING -1
 
 @interface YOSWineModel : NSObject
 
 @property (strong, nonatomic)NSString *type;
-//@property (strong, nonatomic)UIImage *photo;
+@property (strong, nonatomic)UIImage *photo;
 @property (strong, nonatomic) NSURL *webCompany;
 @property (strong, nonatomic) NSString *notes;
 @property (strong,nonatomic) NSString *origin;
@@ -26,19 +27,21 @@
 
 // Metodos de clases
 // Constructores de conveniencia
-+(id)wineWith:(NSString *)aName
-wineCompanyName:(NSString *)aWineCompanyName
-         type:(NSString *) aType
-      origin :(NSString *) aOrigin
-       grapes:(NSArray *)  arrayOfGrapes
-   webCompany:(NSURL *)   aURL
-        notes: (NSString *) aNotes
-       rating: (int) aRating;
++(id) wineWithName:(NSString *) aName
+   wineCompanyName:(NSString *) aWineCompanyName
+              type:(NSString *) aType
+           origin :(NSString *) aOrigin
+            grapes:(NSArray *)  arrayOfGrapes
+        webCompany:(NSURL *)    aURL
+             notes: (NSString *)aNotes
+            rating: (int) aRating
+             photo:(UIImage *) aPhoto;
 
-+(id)wineWith:(NSString *) aName
-wineCompanyName:(NSString *) aWineCompanyName
-         type:(NSString *) aType
-       origin:(NSString *) aOrigin;
+
++(id)wineWithName:(NSString *) aName
+  wineCompanyName:(NSString *) aWineCompanyName
+             type:(NSString *) aType
+           origin:(NSString *) aOrigin;
 
 
 
@@ -51,7 +54,8 @@ wineCompanyName:(NSString *) aWineCompanyName
            grapes:(NSArray *)  arrayOfGrapes
        webCompany:(NSURL *)   aURL
             notes: (NSString *) aNotes
-           rating: (int) aRating;
+           rating: (int) aRating
+            photo:(UIImage *) aPhoto;
 
 
 // Inicializador de conveniencia.

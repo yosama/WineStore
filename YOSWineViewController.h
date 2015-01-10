@@ -11,8 +11,19 @@
 
 @interface YOSWineViewController : UIViewController
 
+// Propiedades
 @property (strong, nonatomic)YOSWineModel *model;
+@property (weak, nonatomic) IBOutlet UILabel *lbName;
+@property (weak, nonatomic) IBOutlet UILabel *lbType;
+@property (weak, nonatomic) IBOutlet UILabel *lbNotes;
+@property (weak, nonatomic) IBOutlet UILabel *lbOrigin;
+@property (weak, nonatomic) IBOutlet UILabel *lbWineCompanyName;
+@property (weak, nonatomic) IBOutlet UILabel *lbGrapes;
+@property (weak, nonatomic) IBOutlet UIImageView *imPhotoView;
+@property (strong, nonatomic)IBOutletCollection(UIImageView) NSArray *imRating;
+
 
 -(id) initWithModel: (YOSWineModel *) aModel;
 
+-(IBAction)displayWeb:(id)sender;
 @end

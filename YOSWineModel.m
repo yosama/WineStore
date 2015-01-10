@@ -11,20 +11,17 @@
 @implementation YOSWineModel
 
 
-
-
-
 #pragma mark - Class methods
 
-
-+(id)wineWithName:(NSString *)aName
-  wineCompanyName:(NSString *)aWineCompanyName
++(id)wineWithName:(NSString *) aName
+  wineCompanyName:(NSString *) aWineCompanyName
              type:(NSString *) aType
           origin :(NSString *) aOrigin
            grapes:(NSArray *)  arrayOfGrapes
-       webCompany:(NSURL *)   aURL
-            notes: (NSString *) aNotes
-           rating: (int) aRating{
+       webCompany:(NSURL *)    aURL
+            notes:(NSString *) aNotes
+           rating:(int) aRating
+            photo:(UIImage *) aPhoto{
     
     return [[self alloc ] initWithName:aName
                        wineCompanyName:aWineCompanyName
@@ -33,9 +30,11 @@
                                 grapes:arrayOfGrapes
                             webCompany:aURL
                                  notes:aNotes
-                                rating:aRating];
+                                rating:aRating
+                                 photo:aPhoto];
     
 }
+
 
 +(id)wineWithName:(NSString *) aName
   wineCompanyName:(NSString *) aWineCompanyName
@@ -46,6 +45,7 @@
                       wineCompanyName:aWineCompanyName
                                  type:aType
                                origin:aOrigin];
+    
     
 }
 
@@ -62,7 +62,8 @@
            grapes:(NSArray *)  arrayOfGrapes
        webCompany:(NSURL *)   aURL
             notes: (NSString *) aNotes
-           rating: (int) aRating{
+           rating: (int) aRating
+            photo:(UIImage *) aPhoto{
     
     
     if (self == [super init]){
@@ -75,8 +76,7 @@
         _webCompany = aURL;
         _notes = aNotes;
         _rating = aRating;
-        
-        
+        _photo = aPhoto;
     }
     return self;
 }
@@ -94,7 +94,8 @@
                        grapes:nil
                    webCompany:nil
                         notes:nil
-                       rating:NO_RATING ];
+                       rating:NO_RATING
+                        photo: nil];
     
     
 }
