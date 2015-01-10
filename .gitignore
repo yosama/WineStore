@@ -1,5 +1,6 @@
 # Xcode
 #
+.DS_Store
 build/
 *.pbxuser
 !default.pbxuser
@@ -10,12 +11,18 @@ build/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata
+profile
 *.xccheckout
 *.moved-aside
 DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
+*.xcworkspace
+!default.xcworksapce
+*.move-aside
+DerivedData
+.idea/
 
 # CocoaPods
 #
@@ -23,4 +30,4 @@ DerivedData
 # you should judge for yourself, the pros and cons are mentioned at:
 # http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
 #
-# Pods/
+Pods/
