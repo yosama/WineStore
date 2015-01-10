@@ -1,4 +1,4 @@
-//
+
 //  AppDelegate.m
 //  WineStore
 //
@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "YOSWineModel.h"
+#import "YOSWineViewController.h"
+#import "YOSWebViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -15,11 +19,33 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor blueColor];
+    
+    // Creamos un modelo
+    YOSWineModel *tintorro = [YOSWineModel wineWithName:@"Bembibre"
+                                        wineCompanyName:@"Dominio de Tares"
+                                                   type:@"tinto"
+                                                 origin:@"El Bierzo"
+                                                 grapes:@[@"Mencía"]
+                                             webCompany:[NSURL URLWithString:@"http://www.google.com"]
+                                                  notes:@"Este vino muestra toda la complejidad y la elegancia de la variedad Mencía. En fase visual luce un color rojo picota muy cubierto con tonalidades violáceas en el menisco. En nariz aparecen recuerdos frutales muy intensos de frutas rojas (frambuesa, cereza) y una potente ciruela negra, así como tonos florales de la gama de las rosas y violetas, vegetales muy elegantes y complementarios, hojarasca verde, tabaco y maderas aromáticas (sándalo) que le brindan un toque ciertamente perfumado."
+                                                 rating:5
+                                                  photo:[UIImage imageNamed:@"bembibre.jpg"]];
+    
+    // Creo el controlador
+    //YOSWineViewController *wineVC = [[YOSWineViewController alloc] initWithModel:tintorro];
+    
+    YOSWebViewController *webVC = [[YOSWebViewController alloc] initWithModel:tintorro];
+    
+    // Asigno el controlador principal
+    self.window.rootViewController = webVC;
+    
+    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 
