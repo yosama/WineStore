@@ -8,8 +8,9 @@
 
 #import "AppDelegate.h"
 #import "YOSWineModel.h"
-#import "YOSWineViewController.h"
+#import "YOSWineryViewController.h"
 #import "YOSWebViewController.h"
+#import "YOSWineryModel.h"
 
 
 @interface AppDelegate ()
@@ -23,26 +24,29 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    // Creamos un modelo
-    YOSWineModel *tintorro = [YOSWineModel wineWithName:@"Bembibre"
-                                        wineCompanyName:@"Dominio de Tares"
-                                                   type:@"tinto"
-                                                 origin:@"El Bierzo"
-                                                 grapes:@[@"Mencía"]
-                                             webCompany:[NSURL URLWithString:@"http://www.google.com"]
-                                                  notes:@"Este vino muestra toda la complejidad y la elegancia de la variedad Mencía. En fase visual luce un color rojo picota muy cubierto con tonalidades violáceas en el menisco. En nariz aparecen recuerdos frutales muy intensos de frutas rojas (frambuesa, cereza) y una potente ciruela negra, así como tonos florales de la gama de las rosas y violetas, vegetales muy elegantes y complementarios, hojarasca verde, tabaco y maderas aromáticas (sándalo) que le brindan un toque ciertamente perfumado."
-                                                 rating:5
-                                                  photo:[UIImage imageNamed:@"bembibre.jpg"]];
+    //Creamos el modelo
+    YOSWineryModel *model = [[YOSWineryModel alloc] init];
+        
+    // Creo los controladores
+    YOSWineViewController *wineVC = [[YOSWineViewController alloc]initWithModel:[model redWineAtIndex:0]];
     
-    // Creo el controlador
-    //YOSWineViewController *wineVC = [[YOSWineViewController alloc] initWithModel:tintorro];
+    YOSWineryViewController *winesVC = [[YOSWineryViewController alloc]
+                                       initWithModel:model style:UITableViewStylePlain];
+
+    //Asignamos el combinador
+    UINavigationController* wineNav = [[UINavigationController alloc] initWithRootViewController:wineVC];
+
+    UINavigationController* winesNav = [[UINavigationController alloc] initWithRootViewController:winesVC];
     
-    YOSWebViewController *webVC = [[YOSWebViewController alloc] initWithModel:tintorro];
+    UISplitViewController* splitVC = [[UISplitViewController alloc] init];
     
+    splitVC.viewControllers =@[winesNav,wineNav];
+
     // Asigno el controlador principal
-    self.window.rootViewController = webVC;
+    self.window.rootViewController = splitVC;
     
     self.window.backgroundColor = [UIColor whiteColor];
+    
     [self.window makeKeyAndVisible];
     
     

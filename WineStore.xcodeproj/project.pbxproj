@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB8A9FFE1A65F5940019853B /* YOSWineryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8A9FFD1A65F5940019853B /* YOSWineryModel.m */; };
+		DB8AA0011A65FF160019853B /* YOSWineryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8AA0001A65FF160019853B /* YOSWineryViewController.m */; };
 		DBC807271A6088670079076B /* bembibre.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBC807251A6088670079076B /* bembibre.jpg */; };
 		DBC807281A6088670079076B /* splitView_score_glass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBC807261A6088670079076B /* splitView_score_glass@2x.png */; };
 		DBC8072D1A60AC380079076B /* YOSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC8072B1A60AC380079076B /* YOSWebViewController.m */; };
@@ -19,6 +21,8 @@
 		DBD2D9741A44BDA600F28C77 /* YOSWineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD2D9731A44BDA600F28C77 /* YOSWineModel.m */; };
 		DBD2D97A1A44D59400F28C77 /* YOSWineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD2D9781A44D59400F28C77 /* YOSWineViewController.m */; };
 		DBD2D97B1A44D59400F28C77 /* YOSWineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBD2D9791A44D59400F28C77 /* YOSWineViewController.xib */; };
+		DBF87EDC1A6DE49F00ABEFA6 /* comtesDeChampagne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBF87EDB1A6DE49F00ABEFA6 /* comtesDeChampagne.jpg */; };
+		DBF87EDE1A6DE4C400ABEFA6 /* zarate.gif in Resources */ = {isa = PBXBuildFile; fileRef = DBF87EDD1A6DE4C400ABEFA6 /* zarate.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB8A9FFC1A65F5940019853B /* YOSWineryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YOSWineryModel.h; path = ../YOSWineryModel.h; sourceTree = "<group>"; };
+		DB8A9FFD1A65F5940019853B /* YOSWineryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YOSWineryModel.m; path = ../YOSWineryModel.m; sourceTree = "<group>"; };
+		DB8A9FFF1A65FF160019853B /* YOSWineryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YOSWineryViewController.h; sourceTree = "<group>"; };
+		DB8AA0001A65FF160019853B /* YOSWineryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YOSWineryViewController.m; sourceTree = "<group>"; };
 		DBC807251A6088670079076B /* bembibre.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bembibre.jpg; sourceTree = "<group>"; };
 		DBC807261A6088670079076B /* splitView_score_glass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splitView_score_glass@2x.png"; sourceTree = "<group>"; };
 		DBC8072A1A60AC380079076B /* YOSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YOSWebViewController.h; sourceTree = "<group>"; };
@@ -52,6 +60,8 @@
 		DBD2D9771A44D59400F28C77 /* YOSWineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YOSWineViewController.h; sourceTree = SOURCE_ROOT; };
 		DBD2D9781A44D59400F28C77 /* YOSWineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YOSWineViewController.m; sourceTree = SOURCE_ROOT; };
 		DBD2D9791A44D59400F28C77 /* YOSWineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YOSWineViewController.xib; sourceTree = SOURCE_ROOT; };
+		DBF87EDB1A6DE49F00ABEFA6 /* comtesDeChampagne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = comtesDeChampagne.jpg; sourceTree = "<group>"; };
+		DBF87EDD1A6DE4C400ABEFA6 /* zarate.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = zarate.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,16 +85,18 @@
 		DBC807291A6088780079076B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DBF87EDD1A6DE4C400ABEFA6 /* zarate.gif */,
+				DBF87EDB1A6DE49F00ABEFA6 /* comtesDeChampagne.jpg */,
 				DBC807251A6088670079076B /* bembibre.jpg */,
 				DBC807261A6088670079076B /* splitView_score_glass@2x.png */,
 			);
 			name = Resources;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		DBD2D9441A44847500F28C77 = {
 			isa = PBXGroup;
 			children = (
-				DBC807291A6088780079076B /* Resources */,
 				DBD2D94F1A44847500F28C77 /* WineStore */,
 				DBD2D9631A44847500F28C77 /* WineStoreTests */,
 				DBD2D94E1A44847500F28C77 /* Products */,
@@ -103,6 +115,7 @@
 		DBD2D94F1A44847500F28C77 /* WineStore */ = {
 			isa = PBXGroup;
 			children = (
+				DBC807291A6088780079076B /* Resources */,
 				DBD2D9761A44BDDC00F28C77 /* Model */,
 				DBD2D97C1A44D60500F28C77 /* Controller */,
 				DBD2D9541A44847500F28C77 /* AppDelegate.h */,
@@ -143,6 +156,8 @@
 		DBD2D9761A44BDDC00F28C77 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DB8A9FFC1A65F5940019853B /* YOSWineryModel.h */,
+				DB8A9FFD1A65F5940019853B /* YOSWineryModel.m */,
 				DBD2D9721A44BDA600F28C77 /* YOSWineModel.h */,
 				DBD2D9731A44BDA600F28C77 /* YOSWineModel.m */,
 			);
@@ -153,6 +168,8 @@
 		DBD2D97C1A44D60500F28C77 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DB8A9FFF1A65FF160019853B /* YOSWineryViewController.h */,
+				DB8AA0001A65FF160019853B /* YOSWineryViewController.m */,
 				DBD2D9771A44D59400F28C77 /* YOSWineViewController.h */,
 				DBD2D9781A44D59400F28C77 /* YOSWineViewController.m */,
 				DBD2D9791A44D59400F28C77 /* YOSWineViewController.xib */,
@@ -245,9 +262,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBD2D95B1A44847500F28C77 /* LaunchScreen.xib in Resources */,
+				DBF87EDC1A6DE49F00ABEFA6 /* comtesDeChampagne.jpg in Resources */,
 				DBC807281A6088670079076B /* splitView_score_glass@2x.png in Resources */,
 				DBD2D97B1A44D59400F28C77 /* YOSWineViewController.xib in Resources */,
 				DBD2D9581A44847500F28C77 /* Images.xcassets in Resources */,
+				DBF87EDE1A6DE4C400ABEFA6 /* zarate.gif in Resources */,
 				DBC807271A6088670079076B /* bembibre.jpg in Resources */,
 				DBC8072E1A60AC380079076B /* YOSWebViewController.xib in Resources */,
 			);
@@ -269,9 +288,11 @@
 			files = (
 				DBD2D9561A44847500F28C77 /* AppDelegate.m in Sources */,
 				DBC8072D1A60AC380079076B /* YOSWebViewController.m in Sources */,
+				DB8A9FFE1A65F5940019853B /* YOSWineryModel.m in Sources */,
 				DBD2D9741A44BDA600F28C77 /* YOSWineModel.m in Sources */,
 				DBD2D9531A44847500F28C77 /* main.m in Sources */,
 				DBD2D97A1A44D59400F28C77 /* YOSWineViewController.m in Sources */,
+				DB8AA0011A65FF160019853B /* YOSWineryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

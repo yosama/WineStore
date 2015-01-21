@@ -7,6 +7,7 @@
 //
 
 #import "YOSWineViewController.h"
+#import "YOSWebViewController.h"
 
 
 
@@ -34,6 +35,10 @@
 {
     [super viewWillAppear:animated];
     
+    self.navigationController.navigationBar.barTintColor =[UIColor colorWithRed:0.5
+                                                                          green:0.0
+                                                                           blue:0.13
+                                                                          alpha:1];
     [self syncModelToView];
 }
 
@@ -67,6 +72,12 @@
 #pragma mark - Actions
 
 -(IBAction)displayWeb:(id)sender{
+    
+    YOSWebViewController *webVC = [[YOSWebViewController alloc] initWithModel:self.model];
+    
+    [[self navigationController] pushViewController:webVC
+                                           animated:YES];
+    
     NSLog(@"Go to %@",self.model.webCompany);
 }
 

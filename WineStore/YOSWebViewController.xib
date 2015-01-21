@@ -17,9 +17,9 @@
             <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <webView contentMode="scaleAspectFit" id="oKV-G9-D3a">
-                    <rect key="frame" x="-100" y="-171" width="706" height="600"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <webView contentMode="scaleAspectFill" id="oKV-G9-D3a">
+                    <rect key="frame" x="0.0" y="0.0" width="706" height="600"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </webView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="Wir-FP-HRE">
@@ -28,7 +28,7 @@
                 </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <point key="canvasLocation" x="207" y="88"/>
+            <point key="canvasLocation" x="332" y="-130"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
