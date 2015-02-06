@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "YOSWineModel.h"
+#import "YOSWineryViewController.h"
 
-@interface YOSWineViewController : UIViewController
 
-// Propiedades
+@interface YOSWineViewController : UIViewController <UISplitViewControllerDelegate,YOSWineryViewControllerDelegate>
+
+// Properties
 @property (strong, nonatomic)YOSWineModel *model;
 @property (weak, nonatomic) IBOutlet UILabel *lbName;
 @property (weak, nonatomic) IBOutlet UILabel *lbType;
@@ -26,4 +28,5 @@
 -(id) initWithModel: (YOSWineModel *) aModel;
 
 -(IBAction)displayWeb:(id)sender;
+
 @end

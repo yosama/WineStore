@@ -22,6 +22,7 @@
 @property (strong, nonatomic) NSArray *grapes;
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *wineCompanyName;
+@property (strong, nonatomic) NSURL *photoURL;
 
 
 
@@ -35,7 +36,7 @@
         webCompany:(NSURL *)    aURL
              notes: (NSString *)aNotes
             rating: (int) aRating
-             photo:(UIImage *) aPhoto;
+             photoURL:(UIImage *) aPhotoURL;
 
 
 +(id)wineWithName:(NSString *) aName
@@ -55,7 +56,7 @@
        webCompany:(NSURL *)   aURL
             notes: (NSString *) aNotes
            rating: (int) aRating
-            photo:(UIImage *) aPhoto;
+            photoURL:(NSURL *) aPhotoURL;
 
 
 // Inicializador de conveniencia.
@@ -63,5 +64,9 @@
   wineCompanyName:(NSString *) aWineCompanyName
              type:(NSString *) aType
            origin:(NSString *) aOrigin;
+
+-(id)initWithDictionary:(NSDictionary *) aDictionary;
+
+
 
 @end

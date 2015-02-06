@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "YOSWineModel.h";
+#import "YOSWineModel.h"
 
 
 @interface YOSWineryModel : NSObject

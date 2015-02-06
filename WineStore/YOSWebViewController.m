@@ -7,6 +7,7 @@
 //
 
 #import "YOSWebViewController.h"
+#import "YOSWineryViewController.h"
 
 
 
@@ -34,11 +35,24 @@
 #pragma mark - Ciclo de vida
 
 // Mantiene sincronizado modelo y vista.
-- (void) viewWillAppear:(BOOL)animated
-{
+- (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    
+    [nc addObserver:self
+           selector:@selector(wineDidChange:)
+               name:NEW_WINE_NOTIFICATION_NAME
+             object:nil];
+
     [self syncModelToView];
+}
+
+
+
+- (void) viewWillDisappear:(BOOL)animated {
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 
@@ -53,22 +67,22 @@
 
 #pragma mark - UIWebViewDelegate
 
-- (void)webViewDidStartLoad:(UIWebView *)webView
-{
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+    
     [self.activityView setHidden:NO];
     [self.activityView startAnimating];
 }
 
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView
-{
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    
     [self.activityView stopAnimating];
     [self.activityView setHidden:YES];
 }
 
 
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
-{
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+    
     [self.activityView stopAnimating];
     [self.activityView setHidden:YES];
     
@@ -81,13 +95,28 @@
 }
 
 
+
 #pragma mark - Util
 
--(void) syncModelToView
-{
+
+-(void) syncModelToView {
+    
     self.title = self.model.wineCompanyName;
     self.browserView.delegate = self;
     [self.browserView loadRequest:[NSURLRequest requestWithURL:self.model.webCompany]];
+}
+
+
+-(void) wineDidChange:(NSNotification *) aNotification {
+    
+    NSDictionary *notfication  = [aNotification userInfo];
+    
+    YOSWineModel *newWine = [notfication objectForKey:WINE_KEY];
+    
+    self.model = newWine;
+    
+    [self syncModelToView];
+    
 }
 
 

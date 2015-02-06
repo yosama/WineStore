@@ -7,10 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "YOSWineModel.h"
-#import "YOSWineryViewController.h"
-#import "YOSWebViewController.h"
 #import "YOSWineryModel.h"
+#import "YOSWineViewController.h"
+#import "YOSWebViewController.h"
+
+
 
 
 @interface AppDelegate ()
@@ -20,35 +21,35 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    //Creamos el modelo
+    //Create Model
     YOSWineryModel *model = [[YOSWineryModel alloc] init];
-        
-    // Creo los controladores
-    YOSWineViewController *wineVC = [[YOSWineViewController alloc]initWithModel:[model redWineAtIndex:0]];
     
-    YOSWineryViewController *winesVC = [[YOSWineryViewController alloc]
-                                       initWithModel:model style:UITableViewStylePlain];
-
-    //Asignamos el combinador
+    // Create controllers
+    YOSWineryViewController* wineryTVC = [[YOSWineryViewController alloc]
+                                         initWithModel:model style:UITableViewStylePlain];
+    
+    YOSWineViewController* wineVC = [[YOSWineViewController alloc]initWithModel:[wineryTVC lastTouchedWine]];
+    
+    //Assign the controllers to combinators
     UINavigationController* wineNav = [[UINavigationController alloc] initWithRootViewController:wineVC];
-
-    UINavigationController* winesNav = [[UINavigationController alloc] initWithRootViewController:winesVC];
+    
+    UINavigationController* wineryNav = [[UINavigationController alloc] initWithRootViewController:wineryTVC];
     
     UISplitViewController* splitVC = [[UISplitViewController alloc] init];
     
-    splitVC.viewControllers =@[winesNav,wineNav];
-
-    // Asigno el controlador principal
-    self.window.rootViewController = splitVC;
+    splitVC.viewControllers = @[wineryNav,wineNav];
+   
+    // Assign delegate
+    splitVC.delegate = wineVC;
+    wineryTVC.delegate = wineVC;
     
     self.window.backgroundColor = [UIColor whiteColor];
-    
     [self.window makeKeyAndVisible];
-    
+    self.window.rootViewController = splitVC;
     
     return YES;
 }
@@ -74,5 +75,9 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+
+
 
 @end

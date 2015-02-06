@@ -7,22 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DB8A9FFE1A65F5940019853B /* YOSWineryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8A9FFD1A65F5940019853B /* YOSWineryModel.m */; };
-		DB8AA0011A65FF160019853B /* YOSWineryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8AA0001A65FF160019853B /* YOSWineryViewController.m */; };
-		DBC807271A6088670079076B /* bembibre.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBC807251A6088670079076B /* bembibre.jpg */; };
-		DBC807281A6088670079076B /* splitView_score_glass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBC807261A6088670079076B /* splitView_score_glass@2x.png */; };
-		DBC8072D1A60AC380079076B /* YOSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC8072B1A60AC380079076B /* YOSWebViewController.m */; };
-		DBC8072E1A60AC380079076B /* YOSWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC8072C1A60AC380079076B /* YOSWebViewController.xib */; };
+		DB4D0BA41A70A82400C7DCB9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4D0BA31A70A82400C7DCB9 /* UIKit.framework */; };
+		DB4D0BA61A70A83400C7DCB9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4D0BA51A70A83400C7DCB9 /* Foundation.framework */; };
+		DB4D0BA81A70A84200C7DCB9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4D0BA71A70A84200C7DCB9 /* CoreGraphics.framework */; };
 		DBD2D9531A44847500F28C77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD2D9521A44847500F28C77 /* main.m */; };
 		DBD2D9561A44847500F28C77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD2D9551A44847500F28C77 /* AppDelegate.m */; };
 		DBD2D9581A44847500F28C77 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD2D9571A44847500F28C77 /* Images.xcassets */; };
 		DBD2D95B1A44847500F28C77 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBD2D9591A44847500F28C77 /* LaunchScreen.xib */; };
 		DBD2D9671A44847500F28C77 /* WineStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD2D9661A44847500F28C77 /* WineStoreTests.m */; };
-		DBD2D9741A44BDA600F28C77 /* YOSWineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD2D9731A44BDA600F28C77 /* YOSWineModel.m */; };
-		DBD2D97A1A44D59400F28C77 /* YOSWineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD2D9781A44D59400F28C77 /* YOSWineViewController.m */; };
-		DBD2D97B1A44D59400F28C77 /* YOSWineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBD2D9791A44D59400F28C77 /* YOSWineViewController.xib */; };
-		DBF87EDC1A6DE49F00ABEFA6 /* comtesDeChampagne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBF87EDB1A6DE49F00ABEFA6 /* comtesDeChampagne.jpg */; };
-		DBF87EDE1A6DE4C400ABEFA6 /* zarate.gif in Resources */ = {isa = PBXBuildFile; fileRef = DBF87EDD1A6DE4C400ABEFA6 /* zarate.gif */; };
+		DBD79CB81A82DF040059F4D8 /* bembibre.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBD79CA81A82DF040059F4D8 /* bembibre.jpg */; };
+		DBD79CB91A82DF040059F4D8 /* comtesDeChampagne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBD79CA91A82DF040059F4D8 /* comtesDeChampagne.jpg */; };
+		DBD79CBA1A82DF040059F4D8 /* splitView_score_glass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBD79CAA1A82DF040059F4D8 /* splitView_score_glass@2x.png */; };
+		DBD79CBB1A82DF040059F4D8 /* YOSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD79CAC1A82DF040059F4D8 /* YOSWebViewController.m */; };
+		DBD79CBC1A82DF040059F4D8 /* YOSWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBD79CAD1A82DF040059F4D8 /* YOSWebViewController.xib */; };
+		DBD79CBD1A82DF040059F4D8 /* YOSWineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD79CAF1A82DF040059F4D8 /* YOSWineModel.m */; };
+		DBD79CBE1A82DF040059F4D8 /* YOSWineryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD79CB11A82DF040059F4D8 /* YOSWineryModel.m */; };
+		DBD79CBF1A82DF040059F4D8 /* YOSWineryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD79CB31A82DF040059F4D8 /* YOSWineryViewController.m */; };
+		DBD79CC01A82DF040059F4D8 /* YOSWineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD79CB51A82DF040059F4D8 /* YOSWineViewController.m */; };
+		DBD79CC11A82DF040059F4D8 /* YOSWineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBD79CB61A82DF040059F4D8 /* YOSWineViewController.xib */; };
+		DBD79CC21A82DF040059F4D8 /* zarate.gif in Resources */ = {isa = PBXBuildFile; fileRef = DBD79CB71A82DF040059F4D8 /* zarate.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,15 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DB8A9FFC1A65F5940019853B /* YOSWineryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YOSWineryModel.h; path = ../YOSWineryModel.h; sourceTree = "<group>"; };
-		DB8A9FFD1A65F5940019853B /* YOSWineryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YOSWineryModel.m; path = ../YOSWineryModel.m; sourceTree = "<group>"; };
-		DB8A9FFF1A65FF160019853B /* YOSWineryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YOSWineryViewController.h; sourceTree = "<group>"; };
-		DB8AA0001A65FF160019853B /* YOSWineryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YOSWineryViewController.m; sourceTree = "<group>"; };
-		DBC807251A6088670079076B /* bembibre.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bembibre.jpg; sourceTree = "<group>"; };
-		DBC807261A6088670079076B /* splitView_score_glass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splitView_score_glass@2x.png"; sourceTree = "<group>"; };
-		DBC8072A1A60AC380079076B /* YOSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YOSWebViewController.h; sourceTree = "<group>"; };
-		DBC8072B1A60AC380079076B /* YOSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YOSWebViewController.m; sourceTree = "<group>"; };
-		DBC8072C1A60AC380079076B /* YOSWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YOSWebViewController.xib; sourceTree = "<group>"; };
+		DB4D0BA31A70A82400C7DCB9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DB4D0BA51A70A83400C7DCB9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DB4D0BA71A70A84200C7DCB9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DBD2D94D1A44847500F28C77 /* WineStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WineStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD2D9511A44847500F28C77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBD2D9521A44847500F28C77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -55,13 +52,22 @@
 		DBD2D9601A44847500F28C77 /* WineStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WineStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD2D9651A44847500F28C77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBD2D9661A44847500F28C77 /* WineStoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WineStoreTests.m; sourceTree = "<group>"; };
-		DBD2D9721A44BDA600F28C77 /* YOSWineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YOSWineModel.h; path = ../YOSWineModel.h; sourceTree = "<group>"; };
-		DBD2D9731A44BDA600F28C77 /* YOSWineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YOSWineModel.m; path = ../YOSWineModel.m; sourceTree = "<group>"; };
-		DBD2D9771A44D59400F28C77 /* YOSWineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YOSWineViewController.h; sourceTree = SOURCE_ROOT; };
-		DBD2D9781A44D59400F28C77 /* YOSWineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YOSWineViewController.m; sourceTree = SOURCE_ROOT; };
-		DBD2D9791A44D59400F28C77 /* YOSWineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YOSWineViewController.xib; sourceTree = SOURCE_ROOT; };
-		DBF87EDB1A6DE49F00ABEFA6 /* comtesDeChampagne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = comtesDeChampagne.jpg; sourceTree = "<group>"; };
-		DBF87EDD1A6DE4C400ABEFA6 /* zarate.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = zarate.gif; sourceTree = "<group>"; };
+		DBD79CA81A82DF040059F4D8 /* bembibre.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bembibre.jpg; sourceTree = "<group>"; };
+		DBD79CA91A82DF040059F4D8 /* comtesDeChampagne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = comtesDeChampagne.jpg; sourceTree = "<group>"; };
+		DBD79CAA1A82DF040059F4D8 /* splitView_score_glass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splitView_score_glass@2x.png"; sourceTree = "<group>"; };
+		DBD79CAB1A82DF040059F4D8 /* YOSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YOSWebViewController.h; sourceTree = "<group>"; };
+		DBD79CAC1A82DF040059F4D8 /* YOSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YOSWebViewController.m; sourceTree = "<group>"; };
+		DBD79CAD1A82DF040059F4D8 /* YOSWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YOSWebViewController.xib; sourceTree = "<group>"; };
+		DBD79CAE1A82DF040059F4D8 /* YOSWineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YOSWineModel.h; sourceTree = "<group>"; };
+		DBD79CAF1A82DF040059F4D8 /* YOSWineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YOSWineModel.m; sourceTree = "<group>"; };
+		DBD79CB01A82DF040059F4D8 /* YOSWineryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YOSWineryModel.h; sourceTree = "<group>"; };
+		DBD79CB11A82DF040059F4D8 /* YOSWineryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YOSWineryModel.m; sourceTree = "<group>"; };
+		DBD79CB21A82DF040059F4D8 /* YOSWineryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YOSWineryViewController.h; sourceTree = "<group>"; };
+		DBD79CB31A82DF040059F4D8 /* YOSWineryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YOSWineryViewController.m; sourceTree = "<group>"; };
+		DBD79CB41A82DF040059F4D8 /* YOSWineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YOSWineViewController.h; sourceTree = "<group>"; };
+		DBD79CB51A82DF040059F4D8 /* YOSWineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YOSWineViewController.m; sourceTree = "<group>"; };
+		DBD79CB61A82DF040059F4D8 /* YOSWineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YOSWineViewController.xib; sourceTree = "<group>"; };
+		DBD79CB71A82DF040059F4D8 /* zarate.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = zarate.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB4D0BA81A70A84200C7DCB9 /* CoreGraphics.framework in Frameworks */,
+				DB4D0BA61A70A83400C7DCB9 /* Foundation.framework in Frameworks */,
+				DB4D0BA41A70A82400C7DCB9 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,16 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DBC807291A6088780079076B /* Resources */ = {
+		DB4D0BA91A70A84C00C7DCB9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DBF87EDD1A6DE4C400ABEFA6 /* zarate.gif */,
-				DBF87EDB1A6DE49F00ABEFA6 /* comtesDeChampagne.jpg */,
-				DBC807251A6088670079076B /* bembibre.jpg */,
-				DBC807261A6088670079076B /* splitView_score_glass@2x.png */,
+				DB4D0BA71A70A84200C7DCB9 /* CoreGraphics.framework */,
+				DB4D0BA51A70A83400C7DCB9 /* Foundation.framework */,
+				DB4D0BA31A70A82400C7DCB9 /* UIKit.framework */,
 			);
-			name = Resources;
-			path = ..;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		DBD2D9441A44847500F28C77 = {
@@ -100,6 +107,7 @@
 				DBD2D94F1A44847500F28C77 /* WineStore */,
 				DBD2D9631A44847500F28C77 /* WineStoreTests */,
 				DBD2D94E1A44847500F28C77 /* Products */,
+				DB4D0BA91A70A84C00C7DCB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,9 +123,9 @@
 		DBD2D94F1A44847500F28C77 /* WineStore */ = {
 			isa = PBXGroup;
 			children = (
-				DBC807291A6088780079076B /* Resources */,
-				DBD2D9761A44BDDC00F28C77 /* Model */,
-				DBD2D97C1A44D60500F28C77 /* Controller */,
+				DBD79CC41A82DF300059F4D8 /* Resources */,
+				DBD79CC51A82DF530059F4D8 /* Controllers */,
+				DBD79CC31A82DF210059F4D8 /* Models */,
 				DBD2D9541A44847500F28C77 /* AppDelegate.h */,
 				DBD2D9551A44847500F28C77 /* AppDelegate.m */,
 				DBD2D9571A44847500F28C77 /* Images.xcassets */,
@@ -153,32 +161,41 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DBD2D9761A44BDDC00F28C77 /* Model */ = {
+		DBD79CC31A82DF210059F4D8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DB8A9FFC1A65F5940019853B /* YOSWineryModel.h */,
-				DB8A9FFD1A65F5940019853B /* YOSWineryModel.m */,
-				DBD2D9721A44BDA600F28C77 /* YOSWineModel.h */,
-				DBD2D9731A44BDA600F28C77 /* YOSWineModel.m */,
+				DBD79CAE1A82DF040059F4D8 /* YOSWineModel.h */,
+				DBD79CAF1A82DF040059F4D8 /* YOSWineModel.m */,
+				DBD79CB01A82DF040059F4D8 /* YOSWineryModel.h */,
+				DBD79CB11A82DF040059F4D8 /* YOSWineryModel.m */,
 			);
-			name = Model;
-			path = WineStore.xcodeproj;
-			sourceTree = SOURCE_ROOT;
+			name = Models;
+			sourceTree = "<group>";
 		};
-		DBD2D97C1A44D60500F28C77 /* Controller */ = {
+		DBD79CC41A82DF300059F4D8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DB8A9FFF1A65FF160019853B /* YOSWineryViewController.h */,
-				DB8AA0001A65FF160019853B /* YOSWineryViewController.m */,
-				DBD2D9771A44D59400F28C77 /* YOSWineViewController.h */,
-				DBD2D9781A44D59400F28C77 /* YOSWineViewController.m */,
-				DBD2D9791A44D59400F28C77 /* YOSWineViewController.xib */,
-				DBC8072A1A60AC380079076B /* YOSWebViewController.h */,
-				DBC8072B1A60AC380079076B /* YOSWebViewController.m */,
-				DBC8072C1A60AC380079076B /* YOSWebViewController.xib */,
+				DBD79CB71A82DF040059F4D8 /* zarate.gif */,
+				DBD79CA81A82DF040059F4D8 /* bembibre.jpg */,
+				DBD79CA91A82DF040059F4D8 /* comtesDeChampagne.jpg */,
+				DBD79CAA1A82DF040059F4D8 /* splitView_score_glass@2x.png */,
 			);
-			name = Controller;
-			path = ..;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		DBD79CC51A82DF530059F4D8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DBD79CAB1A82DF040059F4D8 /* YOSWebViewController.h */,
+				DBD79CAC1A82DF040059F4D8 /* YOSWebViewController.m */,
+				DBD79CAD1A82DF040059F4D8 /* YOSWebViewController.xib */,
+				DBD79CB21A82DF040059F4D8 /* YOSWineryViewController.h */,
+				DBD79CB31A82DF040059F4D8 /* YOSWineryViewController.m */,
+				DBD79CB41A82DF040059F4D8 /* YOSWineViewController.h */,
+				DBD79CB51A82DF040059F4D8 /* YOSWineViewController.m */,
+				DBD79CB61A82DF040059F4D8 /* YOSWineViewController.xib */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +242,7 @@
 		DBD2D9451A44847500F28C77 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = YOS;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = yos;
 				TargetAttributes = {
@@ -261,14 +279,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBD79CB91A82DF040059F4D8 /* comtesDeChampagne.jpg in Resources */,
+				DBD79CBA1A82DF040059F4D8 /* splitView_score_glass@2x.png in Resources */,
+				DBD79CC11A82DF040059F4D8 /* YOSWineViewController.xib in Resources */,
 				DBD2D95B1A44847500F28C77 /* LaunchScreen.xib in Resources */,
-				DBF87EDC1A6DE49F00ABEFA6 /* comtesDeChampagne.jpg in Resources */,
-				DBC807281A6088670079076B /* splitView_score_glass@2x.png in Resources */,
-				DBD2D97B1A44D59400F28C77 /* YOSWineViewController.xib in Resources */,
+				DBD79CB81A82DF040059F4D8 /* bembibre.jpg in Resources */,
+				DBD79CC21A82DF040059F4D8 /* zarate.gif in Resources */,
 				DBD2D9581A44847500F28C77 /* Images.xcassets in Resources */,
-				DBF87EDE1A6DE4C400ABEFA6 /* zarate.gif in Resources */,
-				DBC807271A6088670079076B /* bembibre.jpg in Resources */,
-				DBC8072E1A60AC380079076B /* YOSWebViewController.xib in Resources */,
+				DBD79CBC1A82DF040059F4D8 /* YOSWebViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,13 +304,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBD79CBD1A82DF040059F4D8 /* YOSWineModel.m in Sources */,
+				DBD79CBB1A82DF040059F4D8 /* YOSWebViewController.m in Sources */,
+				DBD79CBF1A82DF040059F4D8 /* YOSWineryViewController.m in Sources */,
+				DBD79CC01A82DF040059F4D8 /* YOSWineViewController.m in Sources */,
 				DBD2D9561A44847500F28C77 /* AppDelegate.m in Sources */,
-				DBC8072D1A60AC380079076B /* YOSWebViewController.m in Sources */,
-				DB8A9FFE1A65F5940019853B /* YOSWineryModel.m in Sources */,
-				DBD2D9741A44BDA600F28C77 /* YOSWineModel.m in Sources */,
 				DBD2D9531A44847500F28C77 /* main.m in Sources */,
-				DBD2D97A1A44D59400F28C77 /* YOSWineViewController.m in Sources */,
-				DB8AA0011A65FF160019853B /* YOSWineryViewController.m in Sources */,
+				DBD79CBE1A82DF040059F4D8 /* YOSWineryModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

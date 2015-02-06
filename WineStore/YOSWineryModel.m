@@ -20,13 +20,17 @@
 @implementation YOSWineryModel
 
 
--(YOSWineModel *) redWineAtIndex: (int) index{
+-(YOSWineModel *) redWineAtIndex: (int) index {
     return [self.redWine objectAtIndex:index];
 }
--(YOSWineModel *) whiteWineAtIndex: (int) index{
+
+
+-(YOSWineModel *) whiteWineAtIndex: (int) index {
     return [self.whiteWine objectAtIndex:index];
 }
--(YOSWineModel *) otherWineAtIndex: (int) index{
+
+
+-(YOSWineModel *) otherWineAtIndex: (int) index {
     return [self.otherWine objectAtIndex:index];
 }
 
@@ -85,9 +89,11 @@
     return [self.redWine count];
 }
 
+
 -(int) whiteWineCount {
     return [self.whiteWine count];
 }
+
 
 -(int) otherWineCount {
     return [self.otherWine count];

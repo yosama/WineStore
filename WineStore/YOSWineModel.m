@@ -21,7 +21,7 @@
        webCompany:(NSURL *)    aURL
             notes:(NSString *) aNotes
            rating:(int) aRating
-            photo:(UIImage *) aPhoto{
+          photoURL:(NSURL *) aPhotoURL{
     
     return [[self alloc ] initWithName:aName
                        wineCompanyName:aWineCompanyName
@@ -31,7 +31,7 @@
                             webCompany:aURL
                                  notes:aNotes
                                 rating:aRating
-                                 photo:aPhoto];
+                                 photoURL:aPhotoURL];
     
 }
 
@@ -50,6 +50,16 @@
 }
 
 
+// Custom photo getter
+-(UIImage *) photo {
+    
+    // Carga perezosa
+    if (!_photo) {
+        _photo = [UIImage imageWithData:[NSData dataWithContentsOfURL:self.photoURL]];
+    }
+    return _photo;
+}
+
 
 // Inicializador designado
 
@@ -63,7 +73,7 @@
        webCompany:(NSURL *)   aURL
             notes: (NSString *) aNotes
            rating: (int) aRating
-            photo:(UIImage *) aPhoto{
+            photoURL:(NSURL *) aPhotoURL{
     
     
     if (self == [super init]){
@@ -76,7 +86,7 @@
         _webCompany = aURL;
         _notes = aNotes;
         _rating = aRating;
-        _photo = aPhoto;
+        _photoURL = aPhotoURL ;
     }
     return self;
 }
@@ -95,10 +105,63 @@
                    webCompany:nil
                         notes:nil
                        rating:NO_RATING
-                        photo: nil];
+                        photoURL: nil];
     
     
 }
+
+
+
+// Initializers of convenience
+
+-(id)initWithDictionary:(NSDictionary *) aDictionary {
+    
+    return [self initWithName:[aDictionary objectForKey:@"name"]
+              wineCompanyName:[aDictionary objectForKey:@"wineCompanyName"]
+                         type:[aDictionary objectForKey:@"type"]
+                       origin:[aDictionary objectForKey:@"origin"]
+                       grapes:[self extractGrapesFromJSONArray:[aDictionary objectForKey:@"grapes"]]
+                   webCompany:[aDictionary objectForKey:@"webCompany"]
+                        notes:[aDictionary objectForKey:@"notes"]
+                       rating:[[aDictionary objectForKey:@"rating"] intValue]
+                     photoURL:[NSURL URLWithString:[aDictionary objectForKey:@"picture"]]];
+    
+    
+}
+
+
+
+-(NSArray *) extractGrapesFromJSONArray:(NSArray *) JSONArray {
+    
+    NSMutableArray *grapes = [NSMutableArray arrayWithCapacity:[JSONArray count]];
+
+    for (NSDictionary *dict in JSONArray) {
+        
+        [grapes addObject:[dict objectForKey:@"grapes"]];
+        
+    }
+    
+    return grapes;
+    
+}
+
+
+
+-(NSDictionary *) proxyForJSON {
+    
+    return @{@"name"           :self.name,
+             @"wineCompanyName":self.wineCompanyName,
+             @"type"           :self.type,
+             @"orgin"          :self.origin,
+             @"grapes"         :self.grapes,
+             @"wineCompanyWeb" :self.webCompany,
+             @"notes"          :self.notes,
+             @"rating"         :@(self.rating),
+             @"picture"        :[self.photoURL path]
+             
+             };
+}
+
 
 
 @end

@@ -8,17 +8,45 @@
 
 #import <UIKit/UIKit.h>
 #import "YOSWineryModel.h"
-#import "YOSWineViewController.h"
+
 
 #define RED_WINE_SECTION 0
 #define WHITE_WINE_SECTION 1
 #define OTHER_WINE_SECTION 2
+#define NEW_WINE_NOTIFICATION_NAME @"newWine"
+#define WINE_KEY @"wine"
+
+#define SECTION_KEY @"section"
+#define ROW_KEY  @"row"
+#define LAST_TOUCHED_WINE @"lastWine"
+
+
+@class YOSWineryViewController;
+
+
+@protocol YOSWineryViewControllerDelegate <NSObject>
+
+-(void) wineSelected : (YOSWineryViewController *) sender wineTouch: (YOSWineModel *) aWine;
+
+@end
 
 
 @interface YOSWineryViewController : UITableViewController
 
 @property (nonatomic,strong) YOSWineryModel* model;
 
--(id)initWithModel: (YOSWineryModel*) model style:(UITableViewStyle) style;
+@property (weak) id<YOSWineryViewControllerDelegate> delegate;
+
+
+
+//Designated
+-(id)initWithModel: (YOSWineryModel*) model
+             style:(UITableViewStyle) style;
+
+
+
+- (YOSWineModel *) lastTouchedWine;
+
+
 
 @end
