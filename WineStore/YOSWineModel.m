@@ -76,7 +76,7 @@
             photoURL:(NSURL *) aPhotoURL{
     
     
-    if (self == [super init]){
+    if (self = [super init]){
         
         _name = aName;
         _wineCompanyName = aWineCompanyName;
@@ -88,6 +88,7 @@
         _rating = aRating;
         _photoURL = aPhotoURL ;
     }
+    
     return self;
 }
 
@@ -121,7 +122,7 @@
                          type:[aDictionary objectForKey:@"type"]
                        origin:[aDictionary objectForKey:@"origin"]
                        grapes:[self extractGrapesFromJSONArray:[aDictionary objectForKey:@"grapes"]]
-                   webCompany:[aDictionary objectForKey:@"webCompany"]
+                   webCompany:[NSURL URLWithString:[aDictionary objectForKey:@"wineCompanyWeb"]]
                         notes:[aDictionary objectForKey:@"notes"]
                        rating:[[aDictionary objectForKey:@"rating"] intValue]
                      photoURL:[NSURL URLWithString:[aDictionary objectForKey:@"picture"]]];
@@ -137,7 +138,7 @@
 
     for (NSDictionary *dict in JSONArray) {
         
-        [grapes addObject:[dict objectForKey:@"grapes"]];
+        [grapes addObject:[dict objectForKey:@"grape"]];
         
     }
     

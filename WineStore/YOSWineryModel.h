@@ -6,8 +6,13 @@
 //  Copyright (c) 2015 yos. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import "YOSWineModel.h"
+
+#define RED_WINE_KEY @"Tinto"
+#define WHITE_WINE_KEY @"Blanco"
+#define OTHER_WINE_KEY @"Rosado"
+
 
 
 @interface YOSWineryModel : NSObject
