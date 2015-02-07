@@ -40,6 +40,27 @@
 }
 
 
+-(void) viewWillAppear:(BOOL)animated {
+   
+    [super viewWillAppear:animated];
+    
+    NSNotificationCenter *nc = [[NSNotificationCenter alloc] init];
+    
+    [nc addObserver:self
+           selector:@selector(wineSelected:wineTouch:)
+               name:NEW_WINE_NOTIFICATION_NAME
+             object:nil];
+    
+}
+
+
+-(void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    
+    [[[NSNotificationCenter alloc] init] removeObserver:self];
+}
+
 
 #pragma mark - Table view data source
 
@@ -120,6 +141,8 @@
     
     [self.delegate wineSelected:self wineTouch: wine];
     
+    
+    
     //Create Notification
     NSNotification *notifify = [NSNotification notificationWithName:NEW_WINE_NOTIFICATION_NAME
                                                              object:self
@@ -127,6 +150,7 @@
 
     [NSNotificationCenter.defaultCenter postNotification:notifify];
     
+    // Save the last wine
     [self saveTouchedWineAtSection:indexPath.section
                                row:indexPath.row];
     
@@ -211,6 +235,19 @@
 }
 
 
+#pragma mark - YOSWineryViewControllerDelegate
+
+
+-(void) wineSelected : (YOSWineryViewController *) sender wineTouch: (YOSWineModel *) aWine {
+    
+    YOSWineViewController *wineVC = [[YOSWineViewController alloc] initWithModel:aWine];
+    
+    [self.navigationController pushViewController:wineVC
+                                         animated:YES];
+    
+    
+    
+}
 
 
 

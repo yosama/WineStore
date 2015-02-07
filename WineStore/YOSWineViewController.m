@@ -47,14 +47,23 @@
         self.edgesForExtendedLayout =UIRectEdgeNone;
     }
     
+    NSNotificationCenter *nc = [[NSNotificationCenter alloc] init];
+    
+    [nc addObserver:self
+           selector:@selector(wineSelected:wineTouch:)
+               name:NEW_WINE_NOTIFICATION_NAME
+             object:nil];
+    
     [self syncModelToView];
 }
 
 
-//-(void) viewWillDisappear:(BOOL)animated
-//{
-//    [super viewWillAppear:<#animated#>];
-//}
+-(void) viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    
+    [[[NSNotificationCenter alloc] init] removeObserver:self];
+}
 
 
 

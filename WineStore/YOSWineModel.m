@@ -122,7 +122,7 @@
                          type:[aDictionary objectForKey:@"type"]
                        origin:[aDictionary objectForKey:@"origin"]
                        grapes:[self extractGrapesFromJSONArray:[aDictionary objectForKey:@"grapes"]]
-                   webCompany:[NSURL URLWithString:[aDictionary objectForKey:@"wineCompanyWeb"]]
+                   webCompany:[NSURL URLWithString:[aDictionary objectForKey:@"wine_web"]]
                         notes:[aDictionary objectForKey:@"notes"]
                        rating:[[aDictionary objectForKey:@"rating"] intValue]
                      photoURL:[NSURL URLWithString:[aDictionary objectForKey:@"picture"]]];
@@ -155,7 +155,7 @@
              @"type"           :self.type,
              @"orgin"          :self.origin,
              @"grapes"         :self.grapes,
-             @"wineCompanyWeb" :self.webCompany,
+             @"wine_web" :self.webCompany,
              @"notes"          :self.notes,
              @"rating"         :@(self.rating),
              @"picture"        :[self.photoURL path]

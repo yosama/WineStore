@@ -31,7 +31,7 @@
 @end
 
 
-@interface YOSWineryViewController : UITableViewController
+@interface YOSWineryViewController : UITableViewController<YOSWineryViewControllerDelegate>
 
 @property (nonatomic,strong) YOSWineryModel* model;
 

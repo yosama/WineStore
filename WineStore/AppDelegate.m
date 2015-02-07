@@ -27,29 +27,16 @@
     
     //Create Model
     YOSWineryModel *model = [[YOSWineryModel alloc] init];
-    
-    // Create controllers
-    YOSWineryViewController* wineryTVC = [[YOSWineryViewController alloc]
-                                         initWithModel:model style:UITableViewStylePlain];
-    
-    YOSWineViewController* wineVC = [[YOSWineViewController alloc]initWithModel:[wineryTVC lastTouchedWine]];
-    
-    //Assign the controllers to combinators
-    UINavigationController* wineNav = [[UINavigationController alloc] initWithRootViewController:wineVC];
-    
-    UINavigationController* wineryNav = [[UINavigationController alloc] initWithRootViewController:wineryTVC];
-    
-    UISplitViewController* splitVC = [[UISplitViewController alloc] init];
-    
-    splitVC.viewControllers = @[wineryNav,wineNav];
-   
-    // Assign delegate
-    splitVC.delegate = wineVC;
-    wineryTVC.delegate = wineVC;
-    
+
+    if ([[UIDevice currentDevice] userInterfaceIdiom ] == UIUserInterfaceIdiomPad ) {
+        [self configureForIPadAtModel:model];
+    } else {
+        [self configureForIPhoneAtModel:model];
+    }
+        
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    self.window.rootViewController = splitVC;
+
     
     return YES;
 }
@@ -76,8 +63,48 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - Configuration
+
+-(void) configureForIPadAtModel: (YOSWineryModel *) aModel {
+    
+    // Create controllers
+    YOSWineryViewController* wineryTVC = [[YOSWineryViewController alloc]
+                                          initWithModel:aModel style:UITableViewStylePlain];
+    
+    YOSWineViewController* wineVC = [[YOSWineViewController alloc]initWithModel:[wineryTVC lastTouchedWine]];
+    
+    //Assign the controllers to combinators
+    UINavigationController* wineNav = [[UINavigationController alloc] initWithRootViewController:wineVC];
+    
+    UINavigationController* wineryNav = [[UINavigationController alloc] initWithRootViewController:wineryTVC];
+    
+    UISplitViewController* splitVC = [[UISplitViewController alloc] init];
+    
+    splitVC.viewControllers = @[wineryNav,wineNav];
+    
+    // Assign delegate
+    splitVC.delegate = wineVC;
+    wineryTVC.delegate = wineVC;
+    self.window.rootViewController = splitVC;
+
+}
 
 
+-(void) configureForIPhoneAtModel: (YOSWineryModel *) aModel {
+    
+    // Create controllers
+    YOSWineryViewController* wineryTVC = [[YOSWineryViewController alloc]
+                                          initWithModel:aModel style:UITableViewStylePlain];
+    
+//    Create combinators
+   UINavigationController* wineryNav = [[UINavigationController alloc] initWithRootViewController:wineryTVC];
+   
+    // Assign deleg
+    wineryTVC.delegate = wineryTVC;
+    
+    self.window.rootViewController = wineryNav;
+    
+}
 
 
 @end
